@@ -1,0 +1,25 @@
+[project]
+name = "Cross City Coders"
+description = "AICOMP module for the Learning Agency Lab - Automated Essay Scoring 2.0 Kaggle challenge"
+version = "0.1.0"
+authors = [
+    {name = "Jannine Meier", email = "jannine.meier@stud.hslu.ch"},
+    {name = "Leon Krug", email = "leon.krug@stud.hslu.ch"},
+    {name = "Jannik Bundeli", email = "jannik.bundeli@stud.hslu.ch"}
+]
+
+[tool.black]
+include = '\.pyi?$'
+
+[tool.isort]
+profile = "black"
+skip_gitignore=true
+py_version=39
+default_section = "THIRDPARTY"
+known_thirdparty=["wandb"]
+
+[tool.pytest.ini_options]
+# Set true to see logger ouput in test command line window
+log_cli = false
+log_cli_level = "INFO"
+log_cli_format = "%(time)s :: %(name)s :: %(message)s"
